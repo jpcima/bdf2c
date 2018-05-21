@@ -422,7 +422,7 @@ void ReadBdf(FILE * bdf, FILE * out, const char *name)
 	    break;
 	}
 	if (!(s = strtok(linebuf, " \t\n\r"))) {	// empty line
-	    break;
+	    continue;
 	}
 	// printf("token:%s\n", s);
 	if (!strcasecmp(s, "FONTBOUNDINGBOX")) {
@@ -502,7 +502,7 @@ void ReadBdf(FILE * bdf, FILE * out, const char *name)
 	    break;
 	}
 	if (!(s = strtok(linebuf, " \t\n\r"))) {	// empty line
-	    break;
+	    continue;
 	}
 	// printf("token:%s\n", s);
 	if (!strcasecmp(s, "STARTCHAR")) {
